@@ -15,7 +15,11 @@ class MyApp extends StatelessWidget {
       designSize: const Size(360, 690),
       minTextAdapt: true,
       splitScreenMode: true,
-      child: MaterialApp(debugShowCheckedModeBanner: false, home: SplashView()),
+      child: MaterialApp(
+        theme: ThemeData(fontFamily: 'Tajawal'),
+        debugShowCheckedModeBanner: false,
+        home: SplashView(),
+      ),
     );
   }
 }

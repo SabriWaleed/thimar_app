@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:thimar_app/widgets/logo_image_widget.dart';
 import 'login_view.dart';
 
 class SplashView extends StatefulWidget {
@@ -28,12 +29,7 @@ class _SplashViewState extends State<SplashView> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: Image.asset(
-          "lib/assets/images/logo.png",
-          width: 140.w,
-          height: 140.h,
-          fit: BoxFit.contain,
-        ),
+        child:LogoImageWidget()
       ),
     );
   }

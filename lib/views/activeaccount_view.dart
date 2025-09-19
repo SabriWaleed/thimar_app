@@ -1,11 +1,11 @@
-
 import 'package:flutter/material.dart';
 import 'package:thimar_app/widgets/customverifyotp_view.dart';
-class VerifyotpView extends StatelessWidget {
-  const VerifyotpView({super.key});
+
+class ActiveaccountView extends StatelessWidget {
+  const ActiveaccountView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return CustomVerifyOtpView(title: "نسيت كلمة المرور");
+    return CustomVerifyOtpView(title: "تفعيل الحساب");
   }
 }

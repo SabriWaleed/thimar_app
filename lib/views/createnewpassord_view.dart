@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar_app/constants/colors.dart';
+import 'package:thimar_app/views/activeaccount_view.dart';
 import 'package:thimar_app/views/login_view.dart';
-import 'package:thimar_app/widgets/containerofcountry_widget.dart';
 import 'package:thimar_app/widgets/filledbutton_widget.dart';
 import 'package:thimar_app/widgets/logo_image_widget.dart';
 import 'package:thimar_app/widgets/textbutton_widget.dart';
@@ -52,7 +52,14 @@ class CreatenewpassordView extends StatelessWidget {
             SizedBox(height: 16.h),
             Center(
               child: FilledbuttonWidget(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ActiveaccountView(),
+                    ),
+                  );
+                },
                 title: "تغيير كلمة المرور",
               ),
             ),

@@ -77,12 +77,7 @@ class LoginView extends StatelessWidget {
             SizedBox(height: 33.h),
             Center(
               child: FilledbuttonWidget(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => SignupView()),
-                  );
-                },
+                onPressed: () {},
                 title: "تسجيل الدخول",
               ),
             ),

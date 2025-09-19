@@ -73,10 +73,7 @@ class SignupView extends StatelessWidget {
             ),
             SizedBox(height: 16.h),
             Center(
-              child: FilledbuttonWidget(
-                onPressed: () {},
-                title: "تسجيل الدخول",
-              ),
+              child: FilledbuttonWidget(onPressed: () {}, title: "تسجيل"),
             ),
             Spacer(),
             Align(

@@ -2,6 +2,7 @@ import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar_app/constants/colors.dart';
+import 'package:thimar_app/views/createnewpassord_view.dart';
 import 'package:thimar_app/views/login_view.dart';
 import 'package:thimar_app/widgets/containerofcountry_widget.dart';
 import 'package:thimar_app/widgets/filledbutton_widget.dart';
@@ -66,7 +67,17 @@ class VerifyotpView extends StatelessWidget {
             OtpPageWidget(),
             SizedBox(height: 24.h),
             Center(
-              child: FilledbuttonWidget(onPressed: () {}, title: "تأكيد الكود"),
+              child: FilledbuttonWidget(
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CreatenewpassordView(),
+                    ),
+                  );
+                },
+                title: "تأكيد الكود",
+              ),
             ),
             SizedBox(height: 23.h),
             Center(

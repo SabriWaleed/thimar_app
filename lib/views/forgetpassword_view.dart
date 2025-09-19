@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar_app/constants/colors.dart';
-import 'package:thimar_app/views/forgetpassword_view.dart';
+import 'package:thimar_app/views/login_view.dart';
 import 'package:thimar_app/views/signup_view.dart';
 import 'package:thimar_app/widgets/containerofcountry_widget.dart';
 import 'package:thimar_app/widgets/filledbutton_widget.dart';
@@ -9,8 +9,8 @@ import 'package:thimar_app/widgets/logo_image_widget.dart';
 import 'package:thimar_app/widgets/textbutton_widget.dart';
 import 'package:thimar_app/widgets/textfield_widget.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class ForgetpasswordView extends StatelessWidget {
+  const ForgetpasswordView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class LoginView extends StatelessWidget {
           children: [
             Center(child: LogoImageWidget()),
             Text(
-              "مرحبا بك مرة أخرى",
+              "نسيت كلمة المرور",
               style: TextStyle(
                 fontSize: 16.sp,
                 fontWeight: FontWeight.w700,
@@ -32,7 +32,7 @@ class LoginView extends StatelessWidget {
             ),
             SizedBox(height: 12.h),
             Text(
-              "يمكنك تسجيل الدخول الأن",
+              "أدخل رقم الجوال المرتبط بحسابك",
               style: TextStyle(
                 fontSize: 16.sp,
                 fontWeight: FontWeight.w300,
@@ -52,37 +52,11 @@ class LoginView extends StatelessWidget {
                 ContainerOfCountryWidget(),
               ],
             ),
-            SizedBox(height: 16.h),
-            TextfieldWidget(
-              text: "كلمة المرور",
-              image: "lib/assets/images/Unlock.png",
-            ),
-            SizedBox(height: 10.h),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: TextbuttonWidget(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ForgetpasswordView(),
-                    ),
-                  );
-                },
-                title: "نسيت كلمة المرور؟",
-                fontWeight: FontWeight.w300,
-                color: Color(0xff707070),
-              ),
-            ),
-            SizedBox(height: 33.h),
+
+            SizedBox(height: 24.h),
             Center(
               child: FilledbuttonWidget(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => SignupView()),
-                  );
-                },
+                onPressed: () {},
                 title: "تسجيل الدخول",
               ),
             ),
@@ -96,15 +70,15 @@ class LoginView extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context) => SignupView()),
+                        MaterialPageRoute(builder: (context) => LoginView()),
                       );
                     },
-                    title: "تسجيل الأن",
+                    title: "تسجيل الدخول",
                     fontWeight: FontWeight.w700,
                     color: primaryColor,
                   ),
                   Text(
-                    "ليس لديك حساب ؟",
+                    "لديك حساب بالفعل ؟",
                     style: TextStyle(
                       color: primaryColor,
                       fontSize: 16.sp,
